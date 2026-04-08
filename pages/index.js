@@ -2923,7 +2923,11 @@ export default function App() {
         lang={lang}
         onUpdateQty={updateQty}
         onRemove={removeFromCart}
-        onContinueShopping={(tab) => { setPage("menu"); if (tab) setActiveTab(tab); }}
+        onContinueShopping={() => {
+  setPage("menu");
+  setActiveTab("经典款");
+  setActiveCategory("mlt");
+}}
         onProceedToPayment={(orderData) => {
           setOrder(orderData);
           setPage("payment");
