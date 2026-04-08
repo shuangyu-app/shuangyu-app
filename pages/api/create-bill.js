@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
   // 🔥 safer description (simple)
   const itemSummary = (items || []).map((i) => `${i.nameEn || i.name} x${i.qty}`).join(", ");
-  const billDesc = `Order #${orderId} | ${itemSummary}`
+  const billDesc    = `Shuangyu pickup ${pickupDate} ${pickupTime} | ${itemSummary}`.slice(0, 100);
 
   const amountInSen = Math.round(total * 100);
 
