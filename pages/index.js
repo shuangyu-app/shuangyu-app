@@ -2800,8 +2800,8 @@ export default function App() {
     try { return localStorage.getItem("syj_lang") || "zh"; } catch { return "zh"; }
   }); // zh | en
   useEffect(() => {
-  setActiveCategory("mlt");
   setActiveTab("经典款");
+  setActiveCategory("mlt");
 }, []);
 
   const toggleLang = () => {
