@@ -2799,6 +2799,10 @@ export default function App() {
   const [lang, setLang] = useState(() => {
     try { return localStorage.getItem("syj_lang") || "zh"; } catch { return "zh"; }
   }); // zh | en
+  useEffect(() => {
+  setActiveCategory("mlt");
+  setActiveTab("经典款");
+}, []);
 
   const toggleLang = () => {
     const next = lang === "zh" ? "en" : "zh";
